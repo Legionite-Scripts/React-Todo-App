@@ -32,7 +32,7 @@ input {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 50em;
+    height: 70em;
     overflow-y: auto;
   }
 }
