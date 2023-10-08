@@ -1,4 +1,4 @@
-import { Default } from "./Components/default";
+import { Default } from "./Components/Default";
 import("./assets/default.css")
 
 function App() {
