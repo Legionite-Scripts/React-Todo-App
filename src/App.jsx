@@ -1,12 +1,15 @@
-import { Default } from "./Components/Default";
-import("./assets/default.css")
+import { Routes, Route } from "react-router-dom";
+import { Default } from "./Components/Default.jsx";
+import("./assets/default.css");
 
 function App() {
-  return(
-    <div className="App">
-      <Default/>
-    </div>
-  )
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Default />}></Route>
+      </Routes>
+    </>
+  );
 }
 
 export default App;

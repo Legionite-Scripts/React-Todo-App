@@ -1,38 +1,103 @@
-body {
-  background-color: #333;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  overflow-y: auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
-#main {
-  width: 100%;
+body {
+  background: linear-gradient(to bottom right, #a28585, #f5f5f5);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 30em;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
 }
-input {
-  width: 15em;
-  height: 2.1em;
+#main {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 1px solid #333; */
+  overflow-y: auto;
+  overflow-x: hidden !important;
 }
-#main strong,#main li{
-    color: #f5f5f5;
-    font-size: 1.1em;
+#main button {
+  transition: all 0.3s ease;
+}
+#main button:hover {
+  transform: scale(1.05);
 }
 
-@media (max-width: 900px) {
+#add {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 4em;
+}
+#add input {
+  background-color: transparent;
+  height: 80%;
+  border: 1.3px solid brown;
+  width: 20em;
+  color: #333;
+}
+#add button {
+  color: #fff;
+  width: 7em;
+}
+
+.added-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.added-item p {
+  flex: 1;
+  font-size: 1.2em;
+  font-weight: 600;
+  user-select: none;
+  /* margin-right: 4%; */
+}
+
+.added-item button {
+  width: 7em;
+}
+
+@media (max-width: 768px) {
   #main {
-    width: 100%;
+    height: auto;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 70em;
+    /* border: 1px solid #333; */
     overflow-y: auto;
+    overflow-x: hidden !important;
+  }
+  #add {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15em;
+  }
+  #add input {
+    background-color: transparent;
+    height: 5em;
+    border: 1.3px solid brown;
+    width: 20em;
+    color: #333;
+  }
+  #add button {
+    color: #fff;
+    width: 7em;
   }
 }
