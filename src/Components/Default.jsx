@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
 export const Default = () => {
