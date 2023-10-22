@@ -69,6 +69,9 @@ body {
 .added-item button {
   width: 7em;
 }
+#deleteBtn{
+  margin-right: 5%;
+}
 
 @media (max-width: 768px) {
   #main {
@@ -99,5 +102,8 @@ body {
   #add button {
     color: #fff;
     width: 7em;
+  }
+  #deleteBtn, #updateBtn{
+    width: 5em;
   }
 }

@@ -22,6 +22,16 @@ export const Default = () => {
     setAppended(updatedAppended);
   };
 
+  const UpdateText = function (index) {
+    let updatedText = prompt("Enter New Text : ");
+    if (updatedText !== null) {
+      // Check if the user canceled the prompt
+      const updatedAppended = [...appended];
+      updatedAppended[index] = updatedText;
+      setAppended(updatedAppended);
+    }
+  };
+
   return (
     <Container fluid id="main">
       <h1 className="display-6">React Todo App</h1>
@@ -41,14 +51,22 @@ export const Default = () => {
       <div className="container" id="addedItems">
         {appended.map((item, index) => (
           <div key={index} className="added-item">
-            <p>
+            <p id="todoText">
               {index + 1}. {item}
             </p>
             <button
               className="btn btn-danger"
+              id="deleteBtn"
               onClick={() => removeFromArray(index)}
             >
               Delete
+            </button>
+            <button
+              className="btn btn-success"
+              id="updateBtn"
+              onClick={() => UpdateText(index)}
+            >
+              Update
             </button>
           </div>
         ))}
